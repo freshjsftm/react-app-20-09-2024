@@ -1,10 +1,16 @@
 import Task from './components/Task/Task';
 
+const dataTask = {
+  id:1,
+  text: 'Learning prop-types',
+  days:4,
+  isDone: false
+}
+
 function App() {
   return (
     <>
-      <Task text="text for first task" days={5} isDone={false} />
-      <Task text="text for 2 task" days={2}  isDone={true}/>
+      <Task dataTask={dataTask}/>
     </>
   );
 }
