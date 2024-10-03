@@ -1,16 +1,10 @@
-import Task from './components/Task/Task';
-
-const dataTask = {
-  id:1,
-  text: 'Learning prop-types',
-  days:4,
-  isDone: false
-}
+import TasksList from "./components/TasksList/TasksList";
 
 function App() {
+  
   return (
     <>
-      <Task dataTask={dataTask}/>
+     <TasksList />
     </>
   );
 }
