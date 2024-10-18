@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './Task.module.css';
+import styles from './Task.module.scss';
 
 const Task = (props) => {
   const {
