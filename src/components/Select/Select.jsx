@@ -3,15 +3,22 @@ import PropTypes from 'prop-types';
 
 const Select = (props) => {
   const { list } = props;
-  const [selectOption, setSelectOption] = useState('');
+  const [selectOption, setSelectOption] = useState('ua');
   const showOption = (elem) => (
     <option key={elem.value} value={elem.value}>
       {elem.label}
     </option>
   );
+  const changeSelectOption = (event)=>{
+    setSelectOption(event.target.value)
+  }
   return (
     <>
-      <select>{list.map(showOption)}</select>
+      <select value={selectOption} 
+      onChange={changeSelectOption}>
+        <option value="" disabled>choose</option>
+        {list.map(showOption)}
+        </select>
     </>
   );
 };
