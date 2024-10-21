@@ -1,0 +1,11 @@
+@mixin font($size, $family, $weight) {
+  font: {
+    size: $size;
+    family: $family;
+    weight: $weight;
+  }
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}

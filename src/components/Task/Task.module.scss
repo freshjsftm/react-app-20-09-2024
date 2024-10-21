@@ -1,10 +1,12 @@
-$width: 25%;
-$min-width: 500px;
-$colorBG: wheat;
-$border-width: 1px;
+@use '/src/common/styles/colors' as *;
+@use '/src/common/styles/widths' as *;
+@use '/src/common/styles/mixins' as *;
+@use '/src/common/styles/inherits' as *;
+ 
 $indent: 10px;
 
 .task {
+  @include border-radius(8px);
   width: $width * 2;
   min-width: $min-width;
   display: flex;
@@ -15,33 +17,25 @@ $indent: 10px;
   margin: $indent - 2;
   background-color: $colorBG;
   &:hover {
-    // background-color: darken($color: $colorBG, $amount: 10%);
-    // background-color: lighten($color: $colorBG, $amount: 10%);
-    // background-color: transparentize($color: $colorBG, $amount: 0.8);
-    background-color: invert($color: $colorBG);
-    color: $colorBG;
-    //background-color: mix($color1: red, $color2: yellow, $weight: 30);
-    // background-color: grayscale($color: $colorBG);
+   @extend %hover;
   }
   p:first-child {
     margin-right: auto;
-    font: {
-      size: 1.3em;
-      family: serif;
-      weight: 600;
-    }
+    @include font(26px, serif, 600);
     text: {
       shadow: 2px 2px 2px white;
-      decoration:{
+      decoration: {
         line: overline;
         style: dotted;
       }
     }
   }
   button {
+    @include border-radius(4px);
+    @include font(20px, Arial, 900);
     margin-left: $indent;
     &:hover {
-      background-color: $colorBG;
+     @extend %hover;
     }
   }
 }
