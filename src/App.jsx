@@ -1,9 +1,10 @@
-import Timer from './components/Timer/Timer';
+import CursorTracker from "./components/CursorTracker/CursorTracker";
+
 
 function App() {
   return (
     <>
-      <Timer />
+      <CursorTracker />
     </>
   );
 }
