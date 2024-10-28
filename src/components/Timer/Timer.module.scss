@@ -1,0 +1,22 @@
+@use '/src/common/styles/colors' as *;
+@use '/src/common/styles/inherits' as *;
+
+.timer {
+  padding: 20px;
+  background-color: $colorBgSecondary;
+  color: $colorTextSecondary;
+  text-align: center;
+  h2 {
+    padding: 10px;
+    border: 5px solid $colorTextSecondary;
+  }
+  div {
+    margin-top: -25px;
+  }
+  button {
+    @extend %btn;
+    &:disabled {
+      background-color: $colorBgSecondary;
+    }
+  }
+}

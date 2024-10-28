@@ -1,9 +1,9 @@
-import TasksList from './components/TasksList/TasksList';
+import Timer from './components/Timer/Timer';
 
 function App() {
   return (
     <>
-      <TasksList />
+      <Timer />
     </>
   );
 }

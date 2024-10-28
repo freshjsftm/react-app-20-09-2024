@@ -4,3 +4,11 @@
   background-color: invert($color: $colorBG);
   color: $colorBG;
 }
+
+%btn{
+  background-color: $colorTextSecondary;
+  border: none;
+  text-transform: uppercase;
+  padding: 5px;
+  margin: 5px;
+}
