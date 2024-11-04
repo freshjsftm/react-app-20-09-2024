@@ -1,0 +1,22 @@
+.outward{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #333333ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inward{
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  button{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+}
