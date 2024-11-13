@@ -1,0 +1,21 @@
+@use '/src/common/styles/colors' as *;
+
+.menu{
+  ul{
+    list-style: none;
+    li{
+      display: inline-block;
+      a{
+        display: block;
+        padding: 10px 15px;
+        margin: 0 5px ;
+        color: inherit;
+        background-color: $colorBG;
+        text-decoration: none;
+        &:hover{
+          background-color: $colorBGHover;
+        }
+      }
+    }
+  }
+}
