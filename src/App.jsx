@@ -5,6 +5,7 @@ import ContactsPage from './pages/ContactsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Header from './components/Header/Header';
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/sign-in" element={<LoginPage />} />
+        <Route path="/sign-up" element={<RegisterPage />} />
         {/* сторінка Not found завжди остання!!! */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
