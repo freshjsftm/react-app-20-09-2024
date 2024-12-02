@@ -26,3 +26,6 @@ function App() {
 }
 
 export default App;
+
+
+//npm install @reduxjs/toolkit react-redux
