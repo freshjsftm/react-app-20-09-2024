@@ -1,14 +1,16 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
 import { addNewTask } from '../../store/todoSlice';
+import { taskSchema } from '../../helpers/validation';
 
 const TaskForm = () => {
   const dispatch = useDispatch();
-  const onSubmit = (values) => {
+  const onSubmit = (values, formikBag) => {
     dispatch(addNewTask({ text: values.text }));
+    formikBag.resetForm();
   };
   return (
-    <Formik initialValues={{ text: '' }} onSubmit={onSubmit}>
+    <Formik initialValues={{ text: '' }} onSubmit={onSubmit} validationSchema={taskSchema}>
       {() => {
         return (
           <Form>

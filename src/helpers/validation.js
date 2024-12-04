@@ -21,3 +21,7 @@ export const signUpSchema = Yup.object({
   confirmPassword: Yup.string().oneOf([Yup.ref('password')]).required('required'),
   year: Yup.number().min(1900).max(new Date().getFullYear(), 'year cannot be in the future'),
 });
+
+export const taskSchema = Yup.object({
+  text: Yup.string().trim().min(3).max(255).required(),
+})
