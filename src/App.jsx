@@ -6,6 +6,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import Header from './components/Header/Header';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import UsersPage from './pages/UsersPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/users" element={<UsersPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/sign-in" element={<LoginPage />} />
         <Route path="/sign-up" element={<RegisterPage />} />
