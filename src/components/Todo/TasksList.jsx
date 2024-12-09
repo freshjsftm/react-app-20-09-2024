@@ -1,22 +1,21 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleTaskIsDone } from '../../store/todoSlice';
+import { loadTasks, saveTasksToLocalStorage } from '../../store/todoSlice';
+import Task from './Task';
 
 const TasksList = () => {
   const { tasks } = useSelector((state) => state.todo);
   const dispatch = useDispatch();
 
-  const showTask = (task) => (
-    <li key={task.id}>
-      <strong
-        onClick={() => {
-          dispatch(toggleTaskIsDone({ id: task.id }));
-        }}
-        style={{ textDecoration: task.isDone && 'line-through' }}
-      >
-        {task.content}
-      </strong>
-    </li>
-  );
+  useEffect(() => {
+    dispatch(loadTasks());
+  }, [dispatch]);
+
+  useEffect(() => {
+    saveTasksToLocalStorage(tasks);
+  }, [tasks]);
+
+  const showTask = (task) => <Task key={task.id} task={task}/>;
   return (
     <section>
       <h3>Tasks list</h3>
